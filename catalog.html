@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог существ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="section-title"></span> Каталог существ </h1>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="yokai">Ёкаи</button>
+                    <button class="filter-btn" data-filter="kami">Ками</button>
+                    <button class="filter-btn" data-filter="spirit">Духи</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <div class="container">
+                <div class="catalog-grid" id="catalogGrid">
+                    <!-- Карточки загружаются через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
