@@ -73,7 +73,15 @@ function displayPreviewCards(creatures) {
     
     previewGrid.innerHTML = '';
     
-    creatures.forEach(creature => {
+    // Массив с ID существ, которые хочу показать
+    const selectedIds = ['kitsune', 'oni', 'raijin', 'shinboku', 'tengu'];
+    
+    // Фильтрую существа
+    const selectedCreatures = creatures.filter(creature => 
+        selectedIds.includes(creature.id)
+    );
+    
+    selectedCreatures.forEach(creature => {
         const card = document.createElement('div');
         card.className = 'preview-card';
         card.dataset.creature = creature.id;
