@@ -1,4 +1,4 @@
-// Основной JavaScript файл для интерактивного гида
+// Основной JavaScript файл для Гида
 
 document.addEventListener('DOMContentLoaded', function() {
     // Бургер-меню
