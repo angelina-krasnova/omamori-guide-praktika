@@ -1,32 +1,12 @@
 // Основной JavaScript файл для интерактивного гида
 
 document.addEventListener('DOMContentLoaded', function() {
-    //понятная ссылка на существо
-    if (handlePrettyUrls()) return;
-
     // Бургер-меню
     initBurgerMenu();
     
     // Загрузка данных о существах
     loadCreaturesData();
 });
-
-function handlePrettyUrls() {
-    const path = window.location.pathname;
-    
-    // Проверяем, если путь содержит /creature/ (например, /creature/kitsune)
-    if (path.includes('/creature/')) {
-        const parts = path.split('/');
-        const creatureId = parts[parts.length - 1]; // последняя часть пути
-        
-        // Перенаправляем на старую версию с параметром
-        if (creatureId && creatureId !== 'creature.html') {
-            window.location.replace(`creature.html?id=${creatureId}`);
-            return true;
-        }
-    }
-    return false;
-}
 
 function initBurgerMenu() {
     const burgerMenu = document.getElementById('burgerMenu');
